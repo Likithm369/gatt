@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NCC | Global Academy of Technology</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 🔵 NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="images/gatlogo.png" class="logo" alt="GAT Logo">
+      <h1 style="margin-left: 10px; color:rgb(232, 240, 12);">GAT NCC</h1>
+      <img src="images/ncclogo.png" class="logo" alt="NCC Logo">
+    </div>
+
+    <!-- 🔽 Hamburger for Mobile -->
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+    <!-- 🔗 Navigation Links -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="Achievements.html" target="_blank">Achievements</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#structure">NCC Structure</a></li>
+      <li><a href="#gallery" target="_blank">Gallery</a></li>
+      <li><a href="learn.html">Learn</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <!-- 🔐 Login Button -->
+    <button id="loginBtn" class="login-btn">Login</button>
+  </nav>
+
+  <!-- 🖼️ Image Slider -->
+  <section class="slider-section">
+    <div class="slider-container">
+      <div class="slide active"><img src="images/gatlogo.png" alt="GAT Logo"></div>
+      <div class="slide"><img src="images/insta.png" alt="Instagram Slide"></div>
+      <div class="slide"><img src="images/ncclogo.png" alt="NCC Logo"></div>
+    </div>
+  </section>
+
+  <!-- ✅ JS for Mobile Navbar -->
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggleBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
+<br><br><br>
+    <br><hr>
+    <br>
+  </section>
+
+
+  <section id="about" class="section alt-bg">
+  <div class="ncc-banner">
+    <h1>About GAT NCC</h1>
+    <p>
+      The National Cadet Corps (NCC) unit at <strong>Global Academy of Technology</strong> is a symbol of discipline, dedication, and nation-building. Our unit operates under the 7/D Company of the <strong>8 Karnataka Battalion NCC</strong>, Bangalore ‘B’ Group, Karnataka & Goa Directorate.
+    </p>
+    <p>
+      Led by our Associate NCC Officer <strong>Lt. Saravanan R</strong>, and guided by experienced PI Staff, GAT NCC trains cadets in leadership, physical fitness, weapon handling, social service, and national pride. From participating in RDC, TSC, Trekking, and Environmental campaigns, our cadets embody the motto: <strong>"Unity and Discipline."</strong>
+    </p>
+    <p>
+      We don't just wear the uniform — we live the spirit of NCC every day.
+    </p>
+  </div>
+</section>
+
+
+
+   <section class="section alt-bg">
+  <h2>Become a Proud NCC Cadet</h2>
+  <p>Join the movement of unity, discipline, and national pride. Enrollment for the new batch is now open.</p>
+  <a href="https://forms.gle/V5XXZwfZ1u33bq5E6" target="_blank">
+    <button class="login-btnn">🚀 Enroll Now</button>
+  </a>
+</section>
+
+ 
+   <div class="ncc-banner">
+  <h1>UNITY AND DISCIPLINE</h1>
+  <p>Global Academy of Technology NCC</p>
+</div>
+
+<hr>
+
+
+
+ <section id="structure" class="section alt-bg">
+  <h2>Our NCC Structure</h2>
+  <div class="structure-grid">
+
+    <!-- 🔵 DGNCC (Single Card) -->
+    <div class="structure-row">
+      <div class="structure-card">
+        <img src="images/dgncc.png" alt="DGNCC">
+        <h3>Lt. Gen. Gurbirpal Singh, AVSM, VSM</h3>
+        <p>Director General, NCC (DGNCC)</p>
+      </div>
+    </div>
+
+    <!-- 🔵 GC & CO -->
+    <div class="structure-row">
+      <div class="structure-card">
+        <img src="images/gc.png" alt="Group Commander">
+        <h3>Colonel Kalia</h3>
+        <p>Group Commander, Bangalore ‘B’ Group</p>
+      </div>
+      <div class="structure-card">
+        <img src="images/co.png" alt="CO">
+        <h3>Colonel Pankaj Sinha</h3>
+        <p>Commanding Officer, 8 KAR BN NCC</p>
+      </div>
+    </div>
+
+    <!-- 🔵 AO, ANO, PI Staff (3 Cards in One Row) -->
+    <div class="structure-row">
+      <div class="structure-card">
+        <img src="images/ao.png" alt="Associate Officer">
+        <h3>Lt. XYZ</h3>
+        <p>Associate Officer (AO), Karnataka & Goa DTE</p>
+      </div>
+      <div class="structure-card">
+        <img src="images/ano.png" alt="ANO">
+        <h3>Lt. Saravanan R</h3>
+        <p>Associate NCC Officer, GAT</p>
+      </div>
+      <div class="structure-card">
+        <img src="images/pi.png" alt="PI Staff">
+        <h3>Abhishek Sir & Keerthi Ma'am</h3>
+        <p>Permanent Instructor Staff, GAT NCC</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+<br><hr>
+
+
+  <section id="trekking" class="section alt-bg">
+    <h2>Trekking & Expeditions</h2>
+    <p>Our cadets have scaled the hills of Coorg, Sikkim, and Sahyadris with pride and endurance.</p>
+  </section>
+
+ 
+  <section id="impacts" class="section">
+    <h2>Social Impacts</h2>
+    <div class="cards">
+      <div class="card">🌳 1,000+ Trees Planted in 2 Years</div>
+      <div class="card">🩸 Blood Donation Camps Every Year</div>
+      <div class="card">🚮 Lake Cleaning, Road Safety Rallies</div>
+    </div>
+  </section>
+
+  <!-- 📸 GALLERY -->
+  <section id="gallery" class="section alt-bg">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="gatlogo.jpg" alt="Drill">
+      <img src="gatlogo.jpg" alt="Camp">
+      <img src="gatlogo.jpg" alt="Unity">
+      <iframe width="100%" height="200" src="randomvideo.mp4" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+ 
+
+
+ <section id="contact" class="section contact-section">
+  <h2>Contact ANO</h2>
+  <div class="contact-card">
+    <img src="images/ncclogo.png" alt="ANO">
+    <h3>lt.Saravanan R</h3>
+    <p>ANO, Global Academy of Technology</p>
+    <p>Email: ano.ncc@gat.ac.in<br>Phone: +91-9876543210</p>
+  </div>
+</section>
+
+
+  <!-- 🔐 CADET LIST - LOCKED -->
+  <section id="cadets" class="section hidden">
+  <h2>Full NCC Cadet List</h2>
+
+  <label for="yearSelect">Select Year:</label>
+  <select id="yearSelect">
+    <option value="">-- Choose Year --</option>
+    <option value="2021">2021</option>
+    <option value="2022">2022</option>
+    <option value="2023">2023</option>
+    <option value="2024">2024</option>
+    <option value="2025">2025</option>
+  </select>
+
+  <ul class="cadet-list" id="cadetList">
+    <!-- Loaded dynamically -->
+  </ul>
+</section>
+
+
+  <section id="visitus" class="social-section">
+  <h1>Follow us for latest updates</h1>
+  <div class="social-icons">
+    <a href="https://www.instagram.com/gatncc/?hl=en" target="_blank">
+      <img src="images/insta.png" class="insta-icon" alt="Instagram">
+    </a>
+    <a href="https://www.facebook.com/gatncc" target="_blank">
+      <img src="images/facebook.png" class="fb-icon" alt="Facebook">
+    </a>
+  </div>
+</section>
+
+<div class="menu-toggle">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+
+
+  <!-- ⚫ FOOTER -->
+  <footer>
+    <p>© 2025 Global Academy of Technology - NCC </p>
+   
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="script.js"></script>
+</body>
+
+
+</html>

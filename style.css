@@ -1,0 +1,460 @@
+/* ========== ROOT VARIABLES ========== */
+:root {
+  --yellow: #fff200;
+  --navy: #013e83;
+  --crimson: #b00020;
+  --lightblue: #49c5f6;
+  --white: #ffffff;
+  --text: #f1f1f1;
+  --dark: #111;
+  --font-main: 'Segoe UI', 'Open Sans', Arial, sans-serif;
+}
+
+/* ========== RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font-main);
+  background: var(--navy);
+  color: var(--text);
+  scroll-behavior: smooth;
+  line-height: 1.6;
+    margin: 0;
+  overflow-x: hidden; /* prevents left-right scroll */
+}
+
+
+
+
+
+/* ========== NAVBAR ========== */
+.navbar {
+  width:100%;
+  background: var(--crimson);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  flex-wrap: wrap;
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.logo {
+  height: 50px;
+}
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.menu-toggle span {
+  background: var(--white);
+  height: 3px;
+  width: 25px;
+  margin: 4px 0;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 38px;
+}
+.nav-links li a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+.nav-links li a:hover {
+  color: var(--yellow);
+  transform: scale(1.2);
+  text-shadow: 0 0 8px var(--yellow);
+}
+.login-btn {
+  background: var(--white);
+  color: var(--navy);
+  padding: 10px 18px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.login-btn:hover {
+  background: var(--yellow);
+  color: var(--crimson);
+}
+
+/* ========== MOBILE NAVBAR ========== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: var(--crimson);
+    margin-top: 15px;
+    padding: 10px 0;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .nav-links li {
+    text-align: center;
+  }
+}
+
+/* ========== STRUCTURE SECTION ========== */
+.structure-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+.structure-row {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.structure-card {
+  background: var(--crimson);
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  width: 280px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  color: var(--white);
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.structure-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px var(--lightblue);
+}
+.structure-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid var(--lightblue);
+}
+.structure-card h3 {
+  font-size: 1.2rem;
+  color: var(--lightblue);
+  margin-bottom: 10px;
+}
+.structure-card p {
+  font-size: 0.95rem;
+}
+
+/* ========== SLIDER SECTION ========== */
+.slider-section {
+  width: 100%;
+  padding: 40px 0;
+  background-color: #08b0f3;
+  display: flex;
+  justify-content: center;
+}
+
+/* ========== SLIDER CONTAINER ========== */
+.slider-container {
+  width: 95%;
+  max-width: 900px;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+  margin: 0 auto; /* ✅ Centered on all devices */
+  background-color: #ffffff;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ========== SLIDE IMAGES / VIDEOS ========== */
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  z-index: 0;
+}
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+.slide img,
+.slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ========== SLIDER TEXT OVERLAY ========== */
+.slider-text {
+  position: absolute;
+  bottom: 30px;
+  left: 40px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-left: 6px solid var(--lightblue);
+  box-shadow: 0 0 20px var(--lightblue);
+  z-index: 2;
+  border-radius: 5px;
+}
+.slider-text h1 {
+  font-size: 2.2rem;
+  color: var(--lightblue);
+}
+.slider-text p {
+  font-size: 1rem;
+  color: var(--white);
+}
+
+/* ========== RESPONSIVE SLIDER FOR SMALL DEVICES ========== */
+@media screen and (max-width: 768px) {
+  .slider-container {
+    height: 240px; /* Smaller height for mobile/tablet */
+  }
+
+  .slider-text {
+    left: 20px;
+    bottom: 20px;
+    padding: 12px;
+  }
+
+  .slider-text h1 {
+    font-size: 1.4rem;
+  }
+
+  .slider-text p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ========== BUTTONS ========== */
+.btn,
+.login-btnn {
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: var(--crimson);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px var(--crimson);
+}
+.btn:hover,
+.login-btnn:hover {
+  background: var(--yellow);
+  color: var(--dark);
+  box-shadow: 0 0 15px var(--yellow);
+}
+
+/* ========== CARDS ========== */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+.card {
+  background: var(--crimson);
+  color: var(--white);
+  padding: 25px;
+  border-radius: 10px;
+  width: 280px;
+  font-size: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  transition: 0.3s ease-in-out;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px var(--lightblue);
+}
+
+/* ========== GALLERY ========== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.gallery-grid img,
+.gallery-grid iframe {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+/* ========== CONTACT CARD ========== */
+.contact-card {
+  background: var(--navy);
+  color: var(--navy);
+  width: 320px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 25px var(--lightblue);
+}
+.contact-card img {
+  width: 90px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+.contact-card h3 {
+  color: var(--white);
+  font-size: 1.3rem;
+  margin-top: 10px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* ========== CADET LIST ========== */
+.hidden {
+  display: none;
+}
+.cadet-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+.cadet-list li {
+  background: var(--crimson);
+  padding: 12px;
+  margin: 8px auto;
+  width: 80%;
+  text-align: left;
+  border-left: 6px solid var(--lightblue);
+  border-radius: 5px;
+  color: var(--white);
+}
+
+/* ========== NCC BANNER ========== */
+.ncc-banner {
+  background-color: var(--lightblue);
+  color: var(--text);
+  text-align: center;
+  padding: 35px 25px;
+  border-radius: 12px;
+  margin: 60px auto 30px;
+  max-width: 920px;
+  font-family: var(--font-main);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  border: 3px solid var(--crimson);
+}
+.ncc-banner h1 {
+  font-size: 2.6rem;
+  margin-bottom: 12px;
+  color: var(--crimson);
+}
+.ncc-banner p {
+  font-size: 2.3rem;
+  color: var(--dark);
+  letter-spacing: 0.8px;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+.ncc-banner:hover {
+  box-shadow: 0 0 35px var(--lightblue);
+  transform: scale(1.02);
+  transition: all 0.3s ease-in-out;
+  border-color: var(--lightblue);
+}
+
+/* ========== SECTION STYLES ========== */
+.section {
+  padding: 70px 20px;
+  text-align: center;
+  background-color: #002b5b;
+  color: var(--text);
+}
+.alt-bg {
+  background-color: #09203f;
+}
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color: var(--lightblue);
+}
+.section p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+/* ========== SOCIAL SECTION ========== */
+.social-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #09203f;
+}
+.social-section h1 {
+  color: var(--lightblue);
+  font-size: 2rem;
+  margin-bottom: 25px;
+  font-family: var(--font-main);
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.social-icons img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  background-color: white;
+}
+.social-icons img:hover {
+  transform: scale(1.25);
+  box-shadow: 0 0 20px var(--lightblue);
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background: var(--dark);
+  padding: 20px;
+  text-align: center;
+  color: var(--yellow);
+}
+.insta-icon {
+  width: 25px;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+.insta-icon:hover {
+  transform: scale(1.2);
+}
+
+
